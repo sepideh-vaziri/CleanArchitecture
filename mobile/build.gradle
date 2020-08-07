@@ -9,7 +9,7 @@ android {
     compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
 
     defaultConfig {
-        applicationId "com.baman.example" //Also be changed at AuthorizationInterceptor class
+        applicationId "com.architecture.clean" //Also be changed at AuthorizationInterceptor class
 
         minSdkVersion globalConfiguration["androidMinSdkVersion"]
         targetSdkVersion globalConfiguration["androidTargetSdkVersion"]

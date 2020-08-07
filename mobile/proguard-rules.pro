@@ -113,13 +113,13 @@
 -keepattributes Exceptions
 
 #***************************************************************************************************
--keep public class com.baman.data.entity.** {*;}
--keep class com.baman.mamanet.base.** {*;}
+-keep public class com.architecture.data.entity.** {*;}
+-keep class com.architecture.mamanet.base.** {*;}
 -dontwarn com.teanab.mamanet.base.**
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Application
 
--keep class com.baman.** { *; }
+-keep class com.architecture.** { *; }
 -dontwarn com.teanab.**
 -keepattributes Exceptions, Signature, InnerClasses
 

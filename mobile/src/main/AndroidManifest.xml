@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
-	package="com.baman.example">
+	package="com.architecture.clean">
 	
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	
 	
 	<application
-		android:name="com.baman.example.base.ProjectApplication"
+		android:name="com.architecture.clean.base.ProjectApplication"
 		android:allowBackup="false"
 		android:debuggable="false"
 		android:icon="@mipmap/ic_launcher"
@@ -22,7 +22,7 @@
 		tools:replace="android:supportsRtl">
 		
 		
-		<activity android:name=".view.activity.employee.EmployeeListActivity"
+		<activity android:name="com.architecture.clean.view.activity.employee.EmployeeListActivity"
 			android:screenOrientation="portrait">
 			
 			<intent-filter>
@@ -32,7 +32,7 @@
 		
 		</activity>
 		
-		<activity android:name=".view.activity.employee.EmployeeDetailsActivity"
+		<activity android:name="com.architecture.clean.view.activity.employee.EmployeeDetailsActivity"
 			android:screenOrientation="portrait" />
 		
 	</application>
