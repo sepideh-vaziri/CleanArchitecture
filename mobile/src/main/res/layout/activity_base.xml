@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/root"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+
+	<!-- *************************************************************************************** -->
+	<FrameLayout
+		android:id="@+id/layout_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toTopOf="@+id/text_no_network_available"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<!-- *************************************************************************************** -->
+	<TextView
+		android:id="@+id/text_no_network_available"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:background="@color/base_activity_no_network_available_background_color"
+		android:gravity="center"
+		android:paddingTop="@dimen/base_activity_no_network_available_vertical_padding"
+		android:paddingBottom="@dimen/base_activity_no_network_available_vertical_padding"
+		android:text="@string/no_network_connection_message"
+		android:textColor="@color/base_activity_no_network_available_textcolor"
+		android:textSize="@dimen/base_activity_no_network_available_textcolor"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

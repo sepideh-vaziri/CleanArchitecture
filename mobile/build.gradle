@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+
+    defaultConfig {
+        applicationId "com.baman.example" //Also be changed at AuthorizationInterceptor class
+
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    packagingOptions {
+        exclude 'asm-license.txt'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def mobileDependencies = rootProject.ext.mobileDependencies
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':data')
+    implementation project(':domain')
+    implementation project(':presentation')
+
+    implementation mobileDependencies.appCompat
+    implementation mobileDependencies.supportV4
+    implementation mobileDependencies.material
+    implementation mobileDependencies.constraintLayout
+    implementation mobileDependencies.javaEightFeatureOnApi24
+    implementation mobileDependencies.lifecycle
+    annotationProcessor mobileDependencies.lifecycleCompiler
+    implementation mobileDependencies.dagger
+    kapt mobileDependencies.daggerCompiler
+    implementation mobileDependencies.kotlin
+    implementation mobileDependencies.retrofit
+    implementation mobileDependencies.timber
+    implementation mobileDependencies.paging
+    implementation mobileDependencies.gsonConverter
+    implementation mobileDependencies.coroutinesCore
+    implementation mobileDependencies.coroutines
+
+}

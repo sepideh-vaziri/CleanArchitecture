@@ -1,0 +1,21 @@
+<resources>
+	
+	<string name="app_name">app name</string>
+	
+	<string name="general_failed_message">The operation failed</string>
+	
+	<string name="no_network_connection_message" >No internet connection.</string>
+	
+	<!-- Loading Item -->
+	<string name="loading_item_text">Loading …</string>
+	
+	<!-- Employee List Activity -->
+	<string name="employee_list_load_data_failed_message">@string/general_failed_message</string>
+	
+	<!-- Employee Details Activity -->
+	<string name="employee_details_load_data_failed_message">@string/general_failed_message</string>
+	<string name="employee_details_name">Name: %s</string>
+	<string name="employee_details_salary">Salary: %s</string>
+	<string name="employee_details_age">Age: %s</string>
+	
+</resources>

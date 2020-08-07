@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion androidTargetSdkVersion
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+        }
+    }
+
+}
+
+dependencies {
+    def dataDependencies = rootProject.ext.dataDependencies
+    def dataTestDependencies = rootProject.ext.dataTestDependencies
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':domain')
+
+    implementation dataDependencies.retrofit
+    implementation dataDependencies.retrofitInterceptor
+    implementation dataDependencies.dagger
+    kapt dataDependencies.daggerCompiler
+    implementation dataDependencies.gson
+    implementation dataDependencies.gsonConverter
+    implementation dataDependencies.kotlin
+    implementation dataDependencies.timber
+    implementation dataDependencies.coroutinesCore
+    implementation dataDependencies.coroutines
+}
+repositories {
+    mavenCentral()
+}

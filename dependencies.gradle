@@ -1,0 +1,166 @@
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "24.0.1"
+    androidMinSdkVersion = 17
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+    androidVersionCode = 1
+    androidVersionName = "1"
+    testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+
+    //Libraries
+    appCompatVersion = '1.3.0-alpha01'
+    supportV4Version = '1.0.0'
+    materialVersion = '1.3.0-alpha01'
+    retrofitVersion = '2.6.0'               //For support android 4.4
+    retrofitInterceptorVersion = '3.12.2'   //For support android 4.4
+    retrofitRxJava = '2.6.0'
+    gsonVersion = '2.8.5'
+    gsonConverterVersion = '2.6.0'
+    rxAndroidVersion = '2.1.1'
+    rxJavaVersion = '2.2.19'
+    javaEightFeatureOnApi24Version = '1.7.1'
+    lifecycleVersion = '2.2.0'
+    lifecycleCompilerVersion = '2.3.0-alpha05'
+    pagingVersion = '2.1.2'
+    daggerVersion = '2.28.3'
+    daggerCompilerVersion = '2.28.3'
+    picassoVersion = '2.71828'
+    javaxAnnotationVersion = '1.0'
+    androidAnnotationsVersion = '1.1.0'
+    constraintLayoutVersion = '2.0.0-beta8'
+    timberVersion = '4.7.1'
+    coroutinesVersion = '1.3.8'
+    mavenGradlePluginVersion = '2.1'
+
+    //Testing
+    robolectricVersion = '3.1.1'
+    jUnitVersion = '4.13'
+    assertJVersion = '3.16.1'
+    mockitoVersion = '3.3.0'
+    dexmakerVersion = '1.0'
+    espressoVersion = '2.0'
+    testingSupportLibVersion = '0.1'
+
+    //Development
+    leakCanaryVersion = '1.6.3'
+
+
+    mobileDependencies = [
+            appCompat:                   "androidx.appcompat:appcompat:${appCompatVersion}",
+            supportV4:                   "androidx.legacy:legacy-support-v4:${supportV4Version}",
+            rxAndroid:                   "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxJava:                      "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            javaEightFeatureOnApi24:     "net.sourceforge.streamsupport:android-retrostreams:${javaEightFeatureOnApi24Version}",
+            lifecycle:                   "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            lifecycleCompiler:           "androidx.lifecycle:lifecycle-compiler:${lifecycleCompilerVersion}",
+            paging:                      "androidx.paging:paging-runtime:${pagingVersion}",
+            dagger:                      "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:              "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            constraintLayout:            "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            material:                    "com.google.android.material:material:${materialVersion}",
+            retrofit:                    "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitRxJava:              "com.squareup.retrofit2:adapter-rxjava2:${retrofitRxJava}",
+            timber:                      "com.jakewharton.timber:timber:${timberVersion}",
+            gsonConverter:               "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
+            coroutinesCore:              "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutines:                  "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+    ]
+
+    presentationDependencies = [
+            rxAndroid:                   "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxJava:                      "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            javaEightFeatureOnApi24:     "net.sourceforge.streamsupport:android-retrostreams:${javaEightFeatureOnApi24Version}",
+            lifecycle:                   "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            lifecycleCompiler:           "androidx.lifecycle:lifecycle-compiler:${lifecycleCompilerVersion}",
+            paging:                      "androidx.paging:paging-runtime:${pagingVersion}",
+            dagger:                      "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:              "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            timber:                      "com.jakewharton.timber:timber:${timberVersion}",
+            coroutinesCore:              "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutines:                  "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+    ]
+
+    presentationTestDependencies = [
+            mockito:                     "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker:                    "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito:             "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso:                    "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib:           "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+    ]
+
+    domainDependencies = [
+            rxJava:                      "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            javaEightFeatureOnApi24:     "net.sourceforge.streamsupport:android-retrostreams:${javaEightFeatureOnApi24Version}",
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            dagger:                      "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:              "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+            coroutinesCore:              "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutines:                  "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+    ]
+
+    domainTestDependencies = [
+            junit:                       "junit:junit:${jUnitVersion}",
+            mockito:                     "org.mockito:mockito-core:${mockitoVersion}",
+            assertj:                     "org.assertj:assertj-core:${assertJVersion}",
+    ]
+
+    dataDependencies = [
+            retrofit:                    "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitInterceptor:         "com.squareup.okhttp3:logging-interceptor:${retrofitInterceptorVersion}",
+            retrofitRxJava:              "com.squareup.retrofit2:adapter-rxjava2:${retrofitRxJava}",
+            dagger:                      "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:              "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+            gson:                        "com.google.code.gson:gson:${gsonVersion}",
+            gsonConverter:               "com.squareup.retrofit2:converter-gson:${gsonConverterVersion}",
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            timber:                      "com.jakewharton.timber:timber:${timberVersion}",
+            coroutinesCore:              "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutines:                  "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+    ]
+
+    dataTestDependencies = [
+            junit:                       "junit:junit:${jUnitVersion}",
+            assertj:                     "org.assertj:assertj-core:${assertJVersion}",
+            mockito:                     "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric:                 "org.robolectric:robolectric:${robolectricVersion}",
+    ]
+
+    developmentDependencies = [
+            leakCanary:                  "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            leakCanarySupportFragment:   "com.squareup.leakcanary:leakcanary-support-fragment:${leakCanaryVersion}"
+    ]
+
+    practicalDependencies = [
+            material:                    "com.google.android.material:material:${materialVersion}",
+            appCompat:                   "androidx.appcompat:appcompat:${appCompatVersion}",
+            constraintLayout:            "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            supportAnnotations:          "androidx.annotation:annotation:${androidAnnotationsVersion}",
+    ]
+
+    utilDependencies = [
+            kotlin:                      "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+            timber:                      "com.jakewharton.timber:timber:${timberVersion}",
+            picasso:                     "com.squareup.picasso:picasso:${picassoVersion}",
+            dagger:                      "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler:              "com.google.dagger:dagger-compiler:${daggerCompilerVersion}",
+    ]
+
+    persianmaterialdatetimepickerDependencies = [
+            appCompat:                   "androidx.appcompat:appcompat:${appCompatVersion}",
+            supportAnnotations:          "androidx.annotation:annotation:${androidAnnotationsVersion}",
+            supportV4:                   "androidx.legacy:legacy-support-v4:${supportV4Version}",
+            mavenGradlePlugin:           "com.github.dcendents:android-maven-gradle-plugin:${mavenGradlePluginVersion}",
+    ]
+
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#FFFFFF</color>
+	<color name="colorPrimaryDark">@color/blue</color>
+	<color name="colorAccent">@color/blue</color>
+	
+	<!-- General -->
+	<color name="white">#FFFFFF</color>
+	<color name="black">#000000</color>
+	<color name="black_text">#333333</color>
+	<color name="black_hint">#d6d6d6</color>
+	<color name="blue">#1890ff</color>
+	
+	<!-- Progressbar Loading -->
+	<color name="progressbar_loading_color">@color/blue</color>
+	
+	<!-- Gray Border Background -->
+	<color name="gray_border_color">#e0e0e0</color>
+	
+	<!-- Base Activity -->
+	<color name="base_activity_no_network_available_background_color">#333333</color>
+	<color name="base_activity_no_network_available_textcolor">#bb0000</color>
+	
+	<!-- Loading Item -->
+	<color name="loading_item_textcolor">@color/black_text</color>
+	
+	<!-- Employee List Activity -->
+	<color name="employee_list_text_color">@color/black_text</color>
+	
+</resources>

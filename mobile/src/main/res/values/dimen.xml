@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<!-- Common text size -->
+	<dimen name="textsize_title_very_big">26sp</dimen>
+	<dimen name="textsize_title_big">24sp</dimen>
+	<dimen name="textsize_title">20sp</dimen>
+	<dimen name="textsize_very_big">18sp</dimen>
+	<dimen name="textsize_big">16sp</dimen>
+	<dimen name="textsize_normal">14sp</dimen>
+	<dimen name="textsize_small">12sp</dimen>
+	<dimen name="textsize_very_small">10sp</dimen>
+	<dimen name="textsize_tiny">8sp</dimen>
+	<dimen name="textsize_very_tiny">6sp</dimen>
+	
+	<!-- Loading Item -->
+	<dimen name="loading_item_textsize">@dimen/textsize_normal</dimen>
+	
+	<!-- Bottom Sheet Dialog -->
+	<dimen name="bottom_sheet_dialog_corner_radius">20dp</dimen>
+	
+	<!-- Gray Border Background -->
+	<dimen name="gray_border_corner_radius">8dp</dimen>
+	<dimen name="gray_border_width">1dp</dimen>
+	
+	<!-- Base Activity -->
+	<dimen name="base_activity_no_network_available_vertical_padding">8dp</dimen>
+	
+	<dimen name="base_activity_no_network_available_textcolor">@dimen/textsize_normal</dimen>
+	
+	<!-- Employee List Activity -->
+	<dimen name="employee_list_item_spacing">12dp</dimen>
+	<dimen name="employee_list_item_padding">8dp</dimen>
+	<dimen name="employee_list_item_vertical_margin">8dp</dimen>
+	<dimen name="employee_list_item_horizontal_margin">4dp</dimen>
+	<dimen name="employee_list_item_image_corner_radius">@dimen/gray_border_corner_radius</dimen>
+	
+	<dimen name="employee_list_item_textsize">@dimen/textsize_normal</dimen>
+	
+	<!-- Employee Details Activity -->
+	<dimen name="employee_details_padding">8dp</dimen>
+	<dimen name="employee_details_vertical_margin">12dp</dimen>
+	<dimen name="employee_details_horizontal_margin">4dp</dimen>
+	<dimen name="employee_details_image_corner_radius">@dimen/employee_list_item_image_corner_radius</dimen>
+	
+	<dimen name="employee_details_textsize">@dimen/textsize_normal</dimen>
+	
+</resources>
