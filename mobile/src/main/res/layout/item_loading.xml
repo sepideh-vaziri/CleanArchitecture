@@ -12,8 +12,8 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05"/>
 
-    <com.seva.practicalview.fontview.FontTextView
-        android:id="@+id/text_loading"
+    <TextView
+        android:id="@+id/textLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/loading_item_text"

@@ -53,10 +53,8 @@ abstract class BaseRecyclerAdapter<T>(context: Context) : RecyclerView.Adapter<R
         val inflater = LayoutInflater.from(mContext)
 
         val view = inflater.inflate(getItemResId(viewType), parent, false)
-        val viewHolder = getItemViewHolder(view)
-        viewHolder.setWidthSize(mContext)
 
-        return viewHolder
+        return getItemViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

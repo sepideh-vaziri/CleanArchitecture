@@ -32,10 +32,8 @@ abstract class BasePagedListAdapter<T>(
         val layoutInflater = LayoutInflater.from(mContext)
 
         val view = layoutInflater.inflate(getItemResId(viewType), parent, false)
-        val viewHolder = getItemViewHolder(view, viewType)
-        viewHolder.setWidthSize(mContext)
 
-        return viewHolder
+        return getItemViewHolder(view, viewType)
     }
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {

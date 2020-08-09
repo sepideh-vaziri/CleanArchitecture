@@ -8,7 +8,7 @@ import com.architecture.clean.view.item.EmployeeItem
 import com.architecture.clean.view.item.base.BaseItem
 import com.architecture.presentation.model.EmployeeModel
 
-class EmployeeAdapter(val context: Context) : BaseRecyclerAdapter<EmployeeModel>(context) {
+class EmployeeAdapter(context: Context) : BaseRecyclerAdapter<EmployeeModel>(context) {
 
     override fun getItemResId(viewType: Int): Int {
         return R.layout.item_employee

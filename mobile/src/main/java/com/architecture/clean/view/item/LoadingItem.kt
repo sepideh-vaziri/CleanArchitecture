@@ -16,10 +16,10 @@ class LoadingItem<T>(itemView: View) : BaseItem<T>(itemView) {
     override fun setVisibilityOfLoadingItem(isVisible: Boolean) {
 
         if (isVisible) {
-            itemView.text_loading.show()
+            itemView.textLoading.show()
         }
         else {
-            itemView.text_loading.hide()
+            itemView.textLoading.hide()
         }
 
     }
