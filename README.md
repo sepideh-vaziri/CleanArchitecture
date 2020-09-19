@@ -5,7 +5,7 @@ The architecture of the project follows the principles of Clean Architecture.
 
     Kotlin
     Coroutine
-	Android Jetpack ViewModel
+    Android Jetpack ViewModel
     Dagger 2
     Retrofit
     OkHttp
